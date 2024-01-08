@@ -5,6 +5,7 @@ import { fail, redirect } from "@sveltejs/kit";
 import postgres from "postgres";
 import { db } from "$lib/server/db";
 import { registrant } from "$lib/server/db/schema";
+import { MAX_LEFT_SIDE, MAX_RIGHT_SIDE } from "$lib/shared/config";
 
 export const load: PageServerLoad = async ({ fetch }) => {
 	const response = await fetch("/api/total");
@@ -27,6 +28,18 @@ export const actions: Actions = {
 		}
 
 		let registrantId: string;
+		const response = await event.fetch("/api/total");
+		const { leftTotal, rightTotal }: { leftTotal: number; rightTotal: number } =
+			await response.json();
+
+		if (form.data.position === "left" && leftTotal >= MAX_LEFT_SIDE) {
+			return message(form, "Oh! Please select another position");
+		}
+
+		if (form.data.position === "right" && rightTotal >= MAX_RIGHT_SIDE) {
+			return message(form, "Oh! Please select another position");
+		}
+
 		try {
 			const id = await db
 				.insert(registrant)
