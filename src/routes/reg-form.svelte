@@ -10,7 +10,7 @@
 	export let rightTotal: number;
 </script>
 
-<Form.Root method="POST" {form} schema={regFormSchema} let:message let:config>
+<Form.Root method="POST" {form} schema={regFormSchema} let:submitting let:message let:config>
 	<Form.Field {config} name="name">
 		<Form.Item>
 			<Form.Label>Full Name</Form.Label>
@@ -96,6 +96,8 @@
 	{/if}
 
 	<div class="flex">
-		<Form.Button class="ml-auto w-full bg-[#174A9D] sm:w-auto">Finish Registration</Form.Button>
+		<Form.Button disabled={submitting} class="ml-auto w-full bg-[#174A9D] sm:w-auto"
+			>Finish Registration</Form.Button
+		>
 	</div>
 </Form.Root>
