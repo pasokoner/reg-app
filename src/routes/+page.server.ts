@@ -61,8 +61,6 @@ export const actions: Actions = {
 				}
 			}
 
-			console.log(e);
-
 			return message(form, "An unknown error occured", {
 				status: 500
 			});

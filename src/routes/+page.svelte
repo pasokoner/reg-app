@@ -16,8 +16,6 @@
 
 			data.leftTotal = responseData.leftTotal;
 			data.rightTotal = responseData.rightTotal;
-
-			console.log(data.leftTotal, data.rightTotal);
 		}
 
 		const interval = setInterval(getTotal, 5000);
