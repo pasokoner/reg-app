@@ -34,14 +34,14 @@
 	</Form.Field>
 	<Form.Field {config} name="emergencyContactName">
 		<Form.Item>
-			<Form.Label>In case of emergy Contact</Form.Label>
+			<Form.Label>In case of emergency contact</Form.Label>
 			<Form.Input placeholder="Name of individual to contact" />
 			<Form.Validation />
 		</Form.Item>
 	</Form.Field>
 	<Form.Field {config} name="emergencyContactNumber">
 		<Form.Item>
-			<Form.Label>In case of emergency Contact Number</Form.Label>
+			<Form.Label>In case of emergency contact number</Form.Label>
 			<Form.Input placeholder="Contact No. of individual to contact" />
 			<Form.Validation />
 		</Form.Item>
