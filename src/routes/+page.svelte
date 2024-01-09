@@ -9,21 +9,21 @@
 	$: total = data.leftTotal + data.rightTotal;
 	$: slot = MAX_REGISTRANTS - total < 1 ? 0 : MAX_REGISTRANTS - total;
 
-	onMount(() => {
-		async function getTotal() {
-			const response = await fetch("/api/total");
-			const responseData: { leftTotal: number; rightTotal: number } = await response.json();
+	// onMount(() => {
+	// 	async function getTotal() {
+	// 		const response = await fetch("/api/total");
+	// 		const responseData: { leftTotal: number; rightTotal: number } = await response.json();
 
-			data.leftTotal = responseData.leftTotal;
-			data.rightTotal = responseData.rightTotal;
-		}
+	// 		data.leftTotal = responseData.leftTotal;
+	// 		data.rightTotal = responseData.rightTotal;
+	// 	}
 
-		const interval = setInterval(getTotal, 5000);
+	// 	const interval = setInterval(getTotal, 5000);
 
-		getTotal();
+	// 	getTotal();
 
-		return () => clearInterval(interval);
-	});
+	// 	return () => clearInterval(interval);
+	// });
 </script>
 
 <main class="container min-h-screen max-w-screen-md space-y-4 pb-16 pt-8">
