@@ -2,7 +2,7 @@
 	import * as Form from "$lib/components/ui/form";
 	import FormDescription from "$lib/components/ui/form/form-description.svelte";
 	import { Label } from "$lib/components/ui/label";
-	import { MAX_LEFT_SIDE, MAX_RIGHT_SIDE } from "$lib/shared/config";
+	import { MAX_LEFT_SIDE, MAX_REGISTRANTS, MAX_RIGHT_SIDE } from "$lib/shared/config";
 	import { regFormSchema, type RegFormSchema } from "$lib/shared/form-schema";
 	import { AlertTriangle } from "lucide-svelte";
 	import type { SuperValidated } from "sveltekit-superforms";
@@ -122,8 +122,9 @@
 	{/if}
 
 	<div class="flex">
-		<Form.Button disabled={submitting} class="ml-auto w-full bg-[#174A9D] sm:w-auto"
-			>Finish Registration</Form.Button
+		<Form.Button
+			disabled={submitting || leftTotal + rightTotal >= MAX_REGISTRANTS}
+			class="ml-auto w-full bg-[#174A9D] sm:w-auto">Finish Registration</Form.Button
 		>
 	</div>
 </Form.Root>
