@@ -1,5 +1,6 @@
 <script lang="ts">
 	import * as Form from "$lib/components/ui/form";
+	import FormDescription from "$lib/components/ui/form/form-description.svelte";
 	import { Label } from "$lib/components/ui/label";
 	import { MAX_LEFT_SIDE, MAX_RIGHT_SIDE } from "$lib/shared/config";
 	import { regFormSchema, type RegFormSchema } from "$lib/shared/form-schema";
@@ -50,6 +51,15 @@
 		<Form.Item>
 			<Form.Label>Address</Form.Label>
 			<Form.Input />
+			<Form.Validation />
+		</Form.Item>
+	</Form.Field>
+
+	<Form.Field {config} name="childName">
+		<Form.Item>
+			<Form.Label>Do you plan on bringing a child aged 13 years old and below?</Form.Label>
+			<Form.Input placeholder="(Optional)" />
+			<Form.FormDescription>If so, please input name of the child</Form.FormDescription>
 			<Form.Validation />
 		</Form.Item>
 	</Form.Field>

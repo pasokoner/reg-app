@@ -19,6 +19,7 @@ export const registrant = pgTable("registrant", {
 	emergencyContactNumber: text("emergency_contact_number").notNull(),
 	address: text("address").notNull(),
 	position: text("position").notNull(),
+	childName: text("child_name"),
 	scanTime: timestamp("scan_time", { withTimezone: true, mode: "string" }),
 	createdAt: timestamp("created_at", { withTimezone: true, mode: "string" }).defaultNow().notNull()
 });
