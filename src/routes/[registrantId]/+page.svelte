@@ -14,7 +14,7 @@
 			class="w-full rounded-md"
 			alt="Gabi ng Musia tagumpay at selebrasyon"
 		/>
-		<h1 class="text-2xl font-bold">Congratulations on your registration!</h1>
+		<h1 class="text-2xl font-bold">Congratulations. You are now registered</h1>
 		<div class="space-y-4 bg-sky-100 p-4">
 			<div class="flex flex-col gap-4 rounded-sm sm:flex-row">
 				<div class="mb-2 flex justify-center">
@@ -37,7 +37,7 @@
 						<span class="font-bold">In case of Emergency Contact No.:</span>
 						{data.registrant.emergencyContactNumber}
 					</p>
-					<p><span class="font-bold">Position:</span> {data.registrant.position}</p>
+					<p><span class="font-bold">Area:</span> {data.registrant.position}</p>
 				</div>
 			</div>
 		</div>
@@ -45,15 +45,14 @@
 		<div class="space-y-2 rounded-sm bg-gray-200 p-4">
 			<h2 class="font-bold">REMINDER</h2>
 			<p>
-				- Use the QR code for your attendance, and you can either save the QR code or bookmark the
-				provided link.
+				- You can use the QR Code <span class="font-bold">ONCE</span> for your entrance. Please make
+				sure that you save the QR code or bookmark the provided link upon the arrival at the venue.
 			</p>
-			<p>- The QR code can only be used once.</p>
+			<p>- Only 13 years old and above can enter. Please bring a valid id for verification</p>
 			<p>
-				- Ensure that you are aged 13 and above (Please bring your ID for verification purposes)
+				- Proceed to the approved designated area. Please check the map below for your guidance.
 			</p>
 			<p>- Please follow the designated position indicated for you.</p>
-			<p class="text-sm">Refer to the image below for guidance:</p>
 			<img src="/stage-layout.jpg" alt="Stage Layout" class="mb-2 rounded-md" />
 		</div>
 	</main>

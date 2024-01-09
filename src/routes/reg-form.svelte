@@ -56,9 +56,9 @@
 
 	<Form.Field {config} name="position">
 		<Form.Item>
-			<Form.Label>Position</Form.Label>
+			<Form.Label>Area</Form.Label>
 			<Form.Select>
-				<Form.SelectTrigger placeholder="Select a position" />
+				<Form.SelectTrigger placeholder="Select area" />
 				<Form.SelectContent>
 					<Form.SelectItem
 						disabled={leftTotal >= MAX_LEFT_SIDE}
@@ -79,7 +79,7 @@
 					>
 				</Form.SelectContent>
 			</Form.Select>
-			<Form.Description>See the pictures below for picking your position</Form.Description>
+			<Form.Description>See picture below to select your area</Form.Description>
 			<Form.Validation />
 		</Form.Item>
 	</Form.Field>
