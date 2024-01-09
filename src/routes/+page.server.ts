@@ -45,7 +45,8 @@ export const actions: Actions = {
 				.insert(registrant)
 				.values({
 					...form.data,
-					dob: new Date(form.data.dob).toISOString()
+					dob: new Date(form.data.dob).toISOString(),
+					childName: form.data.childName ? form.data.childName : undefined
 				})
 				.returning({
 					id: registrant.id
