@@ -23,7 +23,7 @@
 	// 	getTotal();
 
 	// 	return () => clearInterval(interval);
-	// });
+	// });x`
 </script>
 
 <main class="container min-h-screen max-w-screen-md space-y-4 pb-16 pt-8">

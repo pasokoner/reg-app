@@ -4,11 +4,14 @@
 	import { Label } from "$lib/components/ui/label";
 	import { MAX_LEFT_SIDE, MAX_REGISTRANTS, MAX_RIGHT_SIDE } from "$lib/shared/config";
 	import { regFormSchema, type RegFormSchema } from "$lib/shared/form-schema";
+	import * as RadioGroup from "$lib/components/ui/radio-group";
 	import { AlertTriangle } from "lucide-svelte";
 	import type { SuperValidated } from "sveltekit-superforms";
 	export let form: SuperValidated<RegFormSchema, string>;
 	export let leftTotal: number;
 	export let rightTotal: number;
+
+	let haveChild: "yes" | "no" = "no";
 </script>
 
 <Form.Root method="POST" {form} schema={regFormSchema} let:submitting let:message let:config>
@@ -55,14 +58,28 @@
 		</Form.Item>
 	</Form.Field>
 
-	<Form.Field {config} name="childName">
-		<Form.Item>
-			<Form.Label>Do you plan on bringing a child aged 13 years old and below?</Form.Label>
-			<Form.Input placeholder="(Optional)" />
-			<Form.FormDescription>If so, please input name of the child</Form.FormDescription>
-			<Form.Validation />
-		</Form.Item>
-	</Form.Field>
+	<h3 class="mb-2">Do you plan on bringing a child aged 13 years old and below?</h3>
+	<RadioGroup.Root bind:value={haveChild} class="mb-2">
+		<div class="flex items-center space-x-2">
+			<RadioGroup.Item value="no" id="r1" />
+			<Label for="r1">No</Label>
+		</div>
+		<div class="flex items-center space-x-2">
+			<RadioGroup.Item value="yes" id="r2" />
+			<Label for="r2">Yes</Label>
+		</div>
+		<RadioGroup.Input name="spacing" />
+	</RadioGroup.Root>
+
+	{#if haveChild === "yes"}
+		<Form.Field {config} name="childName">
+			<Form.Item>
+				<Form.Label>Name of the child</Form.Label>
+				<Form.Input />
+				<Form.Validation />
+			</Form.Item>
+		</Form.Field>
+	{/if}
 
 	<Form.Field {config} name="position">
 		<Form.Item>
