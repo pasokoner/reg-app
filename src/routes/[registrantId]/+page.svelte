@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { cn } from "$lib/utils.js";
 	import { format } from "date-fns";
 	import { QRCodeImage } from "svelte-qrcode-image";
 
@@ -15,7 +16,12 @@
 			alt="Gabi ng Musia tagumpay at selebrasyon"
 		/>
 		<h1 class="text-2xl font-bold">Congratulations. You are now registered</h1>
-		<div class="space-y-4 bg-sky-100 p-4">
+		<div
+			class={cn(
+				"space-y-4 p-4",
+				data.registrant.position === "left" ? "bg-blue-100" : "bg-red-100"
+			)}
+		>
 			<div class="flex flex-col gap-4 rounded-sm sm:flex-row">
 				<div class="mb-2 flex justify-center">
 					<div class="overflow-hidden rounded-md">

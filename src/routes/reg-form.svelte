@@ -91,15 +91,12 @@
 			<Form.Checkbox />
 			<div class="space-y-1 leading-none">
 				<Form.Label
-					>By checking this box, you agree to Republic Act 10173, also known as the Data Privacy Act
-					of 2012</Form.Label
-				>
+					>Data Privacy Notice for Gabi ng Musika, Tagumpay, at Selebrasyon Registration:
+				</Form.Label>
 				<Form.Description
-					><a
-						href="https://privacy.gov.ph/data-privacy-act/"
-						target="_blank"
-						class="text-blue-400 underline">REPUBLIC ACT 10173 DATA PRIVACY ACT OF 2012</a
-					></Form.Description
+					>By registering, you agree to the collection and processing of your personal information
+					for event management purposes in accordance with Republic Act 10173, also known as the
+					Data Privacy Act of 2012.</Form.Description
 				>
 			</div>
 		</Form.Item>
