@@ -13,7 +13,7 @@ export const regFormSchema = z.object({
 
 			return age >= 13;
 		},
-		{ message: "A date of birth is required." }
+		{ message: "Age of 13 and above is required" }
 	),
 	contactNumber: z.string().regex(new RegExp("^(09)[0-9]{9}$"), "Invalid mobile number"),
 	emergencyContactName: z.string().trim().min(1, "Emergency contact name is required"),
