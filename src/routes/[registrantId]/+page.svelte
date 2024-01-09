@@ -72,6 +72,10 @@
 				- Registered man o non-registered, dapat ay may kasamang magulang ang mga batang may edad 13
 				pababa.
 			</p>
+			<p>
+				- Tanging ang mga magulang o guardian ng mga may edad 13 pababa ang makakapagrehistro sa
+				kanila. (1 guardian/parent = 1 child policy)
+			</p>
 			<p>- Hinihikayat ang lahat na magsuot ng face mask upang maseguro ang inyong kaligtasan.</p>
 			<img src="/stage-layout.jpg" alt="Stage Layout" class="mb-2 rounded-md" />
 		</div>

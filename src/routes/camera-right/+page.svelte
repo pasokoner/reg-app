@@ -32,7 +32,7 @@
 	}
 
 	async function findRegistrant(id: string): Promise<Registrant> {
-		const response = await fetch(`/api/camera-left/${id}`);
+		const response = await fetch(`/api/camera-right/${id}`);
 
 		const reg: { registrant: Registrant; message?: string } = await response.json();
 
@@ -51,7 +51,7 @@
 		<video id="video-feed" />
 
 		<div class="absolute top-0 w-full">
-			<h1 class="w-full bg-gray-200 py-4 text-center text-xl font-bold">LEFT AREA SCANNER</h1>
+			<h1 class="w-full bg-gray-200 py-4 text-center text-xl font-bold">RIGHT AREA SCANNER</h1>
 
 			{#if scannedResult}
 				{#await findRegistrant(scannedResult)}
