@@ -1,17 +1,17 @@
 import { z } from "zod";
-// import { differenceInYears } from "date-fns";
+import { differenceInYears } from "date-fns";
 
 export const regFormSchema = z.object({
 	name: z.string().trim().min(1, "Name is required"),
 	dob: z.string().refine(
 		(v) => {
-			// const birthday = new Date(v);
+			const birthday = new Date(v);
 
-			// const currentDate = new Date();
+			const currentDate = new Date();
 
-			// const age = differenceInYears(currentDate, birthday);
+			const age = differenceInYears(currentDate, birthday);
 
-			return v;
+			return age >= 13;
 		},
 		{ message: "A date of birth is required." }
 	),
