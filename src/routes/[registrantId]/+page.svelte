@@ -52,7 +52,7 @@
 			<p>
 				- Proceed to the approved designated area. Please check the map below for your guidance.
 			</p>
-			<p>- Please follow the designated position indicated for you.</p>
+			<p>- Please follow the designated area indicated for you.</p>
 			<img src="/stage-layout.jpg" alt="Stage Layout" class="mb-2 rounded-md" />
 		</div>
 	</main>

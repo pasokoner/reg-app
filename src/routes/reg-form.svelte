@@ -86,6 +86,25 @@
 
 	<img src="/stage-layout.jpg" alt="Stage Layout" class="mb-2 rounded-md" />
 
+	<Form.Field {config} name="dpa">
+		<Form.Item class="mb-2 flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+			<Form.Checkbox />
+			<div class="space-y-1 leading-none">
+				<Form.Label
+					>By checking this box, you agree to Republic Act 10173, also known as the Data Privacy Act
+					of 2012</Form.Label
+				>
+				<Form.Description
+					><a
+						href="https://privacy.gov.ph/data-privacy-act/"
+						target="_blank"
+						class="text-blue-400 underline">REPUBLIC ACT 10173 DATA PRIVACY ACT OF 2012</a
+					></Form.Description
+				>
+			</div>
+		</Form.Item>
+	</Form.Field>
+
 	{#if message}
 		<div
 			class="mb-2 flex items-center gap-x-2 rounded-md bg-destructive/15 p-3 text-sm text-destructive"

@@ -19,7 +19,8 @@ export const regFormSchema = z.object({
 	emergencyContactName: z.string().trim().min(1, "Emergency contact name is required"),
 	emergencyContactNumber: z.string().regex(new RegExp("^(09)[0-9]{9}$"), "Invalid mobile number"),
 	address: z.string().trim().min(4, "Address is required"),
-	position: z.string().min(1, "Please select a position")
+	position: z.string().min(1, "Please select a position"),
+	dpa: z.boolean().refine((v) => v)
 });
 
 export type RegFormSchema = typeof regFormSchema;
