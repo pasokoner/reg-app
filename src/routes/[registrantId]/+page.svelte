@@ -44,21 +44,35 @@
 						{data.registrant.emergencyContactNumber}
 					</p>
 					<p><span class="font-bold">Area:</span> {data.registrant.position}</p>
+					{#if data.registrant.childName}
+						<span class="font-bold">Child Name:</span>
+						{data.registrant.childName}
+					{/if}
 				</div>
 			</div>
 		</div>
 
 		<div class="space-y-2 rounded-sm bg-gray-200 p-4">
-			<h2 class="font-bold">REMINDER</h2>
+			<h2 class="font-bold">
+				MGA PAALALA SA MISMONG ARAW NG GABI NG MUSIKA, TAGUMPAY, AT SELEBRASYON
+			</h2>
+			<p>* Magdala ng Valid ID</p>
+			<p>* Siguruhing may kopya ng QR CODE (Screenshot o Printed)</p>
 			<p>
-				- You can use the QR Code <span class="font-bold">ONCE</span> for your entrance. Please make
-				sure that you save the QR code or bookmark the provided link upon the arrival at the venue.
+				* Magtungo sa assigned area (left/right) upang maiwasan ang pagkalito sa pagscan ng QR Code.
 			</p>
-			<p>- Only 13 years old and above can enter. Please bring a valid id for verification</p>
 			<p>
-				- Proceed to the approved designated area. Please check the map below for your guidance.
+				* Ang lahat ng registered audience ay maaaring pumasok hanggang 8:00 PM lamang. Ito ay upang
+				mabigyan ng pagkakataon ang mga hindi registered na makapasok hangga't hindi naaabot ang
+				maximum capacity ng lugar na pag gaganapan.
 			</p>
-			<p>- Please follow the designated area indicated for you.</p>
+			<p>Para sa mga non-registered audience:</p>
+			<p>* Pumunta ng maaga upang makahanap ng magandang pwesto.</p>
+			<p>
+				- Registered man o non-registered, dapat ay may kasamang magulang ang mga batang may edad 13
+				pababa.
+			</p>
+			<p>- Hinihikayat ang lahat na magsuot ng face mask upang maseguro ang inyong kaligtasan.</p>
 			<img src="/stage-layout.jpg" alt="Stage Layout" class="mb-2 rounded-md" />
 		</div>
 	</main>

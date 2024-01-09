@@ -54,6 +54,7 @@
 		"formsnap": "^0.4.2",
 		"lucide-svelte": "^0.307.0",
 		"postgres": "^3.4.3",
+		"qr-scanner": "^1.4.2",
 		"svelte-qrcode-image": "1.0.0-rc.2",
 		"sveltekit-superforms": "^1.13.2",
 		"tailwind-merge": "^2.2.0",
