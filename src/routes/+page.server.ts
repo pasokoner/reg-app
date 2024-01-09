@@ -32,6 +32,10 @@ export const actions: Actions = {
 		const { leftTotal, rightTotal }: { leftTotal: number; rightTotal: number } =
 			await response.json();
 
+		if (leftTotal >= MAX_LEFT_SIDE && rightTotal >= MAX_RIGHT_SIDE) {
+			return message(form, "Oh sorry. No more slot available");
+		}
+
 		if (form.data.position === "left" && leftTotal >= MAX_LEFT_SIDE) {
 			return message(form, "Oh! Please select another position");
 		}
