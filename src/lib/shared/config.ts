@@ -1,4 +1,0 @@
-export const MAX_LEFT_SIDE = 2446;
-export const MAX_RIGHT_SIDE = 2445;
-
-export const MAX_REGISTRANTS = MAX_LEFT_SIDE + MAX_RIGHT_SIDE;
