@@ -1,8 +1,6 @@
 <script lang="ts">
 	import RegForm from "./reg-form.svelte";
 	import { rememberingErlinda2PM } from "$lib/config.js";
-	import RememberingErlinda1 from "$lib/assets/remembering-erlinda-1.png";
-	import { toImageUrl } from "$lib/utils";
 	import { onMount } from "svelte";
 
 	export let data;
@@ -28,10 +26,7 @@
 {#if data.registrantCount >= rememberingErlinda2PM.limit}
 	<div>SORRY THE REGISTRATION IS CLOSED</div>
 {:else}
-	<div
-		class="bg-contain bg-fixed bg-center"
-		style={`background-image: ${toImageUrl(RememberingErlinda1)}`}
-	>
+	<div class="bg-centerbg-center bg-[(/remembering-erlinda.webp)] bg-contain bg-fixed">
 		<main class="container flex min-h-screen w-full flex-col justify-center py-16">
 			<div class="w-full">
 				<div class="mx-auto max-w-2xl space-y-1 rounded-t-md bg-neutral-300 px-4 py-4 sm:px-6">

@@ -3,8 +3,6 @@
 	import QrCode from "$lib/components/qr-code.svelte";
 	import html2canvas from "html2canvas";
 	import { page } from "$app/stores";
-	import RememberingErlinda1 from "$lib/assets/remembering-erlinda-1.png";
-	import { toImageUrl } from "$lib/utils";
 	import { rememberingErlinda2PM } from "$lib/config";
 
 	export let data;
@@ -20,10 +18,7 @@
 	});
 </script>
 
-<div
-	class="bg-contain bg-fixed bg-center"
-	style={`background-image: ${toImageUrl(RememberingErlinda1)}`}
->
+<div class="bg-[(/remembering-erlinda.webp)] bg-contain bg-fixed bg-center">
 	<main class="container flex min-h-screen w-full flex-col justify-center py-16">
 		<div class="w-full">
 			<div
