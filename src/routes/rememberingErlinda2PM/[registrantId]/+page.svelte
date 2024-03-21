@@ -18,7 +18,7 @@
 	});
 </script>
 
-<div class="bg-[(/remembering-erlinda.webp)] bg-contain bg-fixed bg-center">
+<div class="bg-[url('/remembering-erlinda.webp')] bg-contain bg-fixed bg-center">
 	<main class="container flex min-h-screen w-full flex-col justify-center py-16">
 		<div class="w-full">
 			<div

@@ -26,7 +26,7 @@
 {#if data.registrantCount >= rememberingErlinda2PM.limit}
 	<div>SORRY THE REGISTRATION IS CLOSED</div>
 {:else}
-	<div class="bg-centerbg-center bg-[(/remembering-erlinda.webp)] bg-contain bg-fixed">
+	<div class="bg-centerbg-center bg-[url('/remembering-erlinda.webp')] bg-contain bg-fixed">
 		<main class="container flex min-h-screen w-full flex-col justify-center py-16">
 			<div class="w-full">
 				<div class="mx-auto max-w-2xl space-y-1 rounded-t-md bg-neutral-300 px-4 py-4 sm:px-6">
