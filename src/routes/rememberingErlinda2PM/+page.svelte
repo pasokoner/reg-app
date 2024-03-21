@@ -9,7 +9,7 @@
 
 	onMount(() => {
 		async function getTotal() {
-			const response = await fetch("/rememberingErlinda2PM");
+			const response = await fetch("/api/rememberingErlinda2PM");
 			const result: { total: number }[] = await response.json();
 
 			data.registrantCount = result[0].total;
