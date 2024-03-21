@@ -5,6 +5,7 @@
 
 	export let data;
 
+	let registrantCount = data.registrantCount;
 	$: closed = data.registrantCount >= 1000;
 
 	onMount(() => {
@@ -12,7 +13,7 @@
 			const response = await fetch("/api/rememberingErlinda2PM");
 			const result: { total: number }[] = await response.json();
 
-			data.registrantCount = result[0].total;
+			registrantCount = result[0].total;
 		}
 
 		const interval = setInterval(getTotal, 30000);
@@ -23,7 +24,7 @@
 	});
 </script>
 
-{#if data.registrantCount >= rememberingErlinda2PM.limit}
+{#if registrantCount >= rememberingErlinda2PM.limit}
 	<div>SORRY THE REGISTRATION IS CLOSED</div>
 {:else}
 	<div class="bg-centerbg-center bg-[url('/remembering-erlinda.webp')] bg-contain bg-fixed">
@@ -46,7 +47,7 @@
 					<p class="text-xs text-neutral-600 sm:text-sm">
 						<span class="font-bold">Registration Limit:</span>
 						<span class="rounded-lg bg-white px-2 py-1">
-							{data.registrantCount} / {rememberingErlinda2PM.limit}
+							{registrantCount} / {rememberingErlinda2PM.limit}
 						</span>
 						{#if closed}
 							<span class="rounded-lg bg-red-500 px-2 py-1 text-white">CLOSED</span>
