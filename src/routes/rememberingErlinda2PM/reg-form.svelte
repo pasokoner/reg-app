@@ -1,6 +1,8 @@
 <script lang="ts">
 	import * as Form from "$lib/components/ui/form";
 	import { Input } from "$lib/components/ui/input";
+	import * as Select from "$lib/components/ui/select/index.js";
+	import { rememberingErlinda2PM } from "$lib/config";
 	import { registrationFormSchema, type RegistrationFormSchema } from "./schema";
 	import { type SuperValidated, type Infer, superForm } from "sveltekit-superforms";
 	import { zodClient } from "sveltekit-superforms/adapters";
@@ -14,6 +16,13 @@
 	});
 
 	const { form: formData, enhance, errors } = form;
+
+	$: seletectedSchool = $formData.school
+		? {
+				label: $formData.school,
+				value: $formData.school
+			}
+		: undefined;
 </script>
 
 <form method="POST" use:enhance class="space-y-4">
@@ -36,7 +45,22 @@
 	<Form.Field {form} name="school">
 		<Form.Control let:attrs>
 			<Form.Label>School</Form.Label>
-			<Input {...attrs} disabled={closed} bind:value={$formData.school} />
+			<Select.Root
+				selected={seletectedSchool}
+				onSelectedChange={(v) => {
+					v && ($formData.school = v.value);
+				}}
+			>
+				<Select.Trigger {...attrs}>
+					<Select.Value placeholder="Select" />
+				</Select.Trigger>
+				<Select.Content>
+					{#each rememberingErlinda2PM.schools as school}
+						<Select.Item value={school} label={school} />
+					{/each}
+				</Select.Content>
+			</Select.Root>
+			<input hidden bind:value={$formData.email} name={attrs.name} />
 		</Form.Control>
 		<Form.FieldErrors />
 	</Form.Field>
