@@ -2,13 +2,13 @@ import type { Actions, PageServerLoad } from "./$types";
 import { emailVerificationSchema } from "$lib/zod-schemas";
 import { fail, redirect } from "@sveltejs/kit";
 import { db } from "$lib/server/db";
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import { isWithinExpirationDate } from "oslo";
 import { generateEmailVerificationCode, sendEmail } from "$lib/server/email";
 import { emailVerficationTable, rememberingErlinda2PMTable } from "$lib/server/db/schema";
 import { setError, superValidate } from "sveltekit-superforms";
 import { zod } from "sveltekit-superforms/adapters";
-import { rememberingErlinda2PM } from "$lib/config";
+import { rememberingErlinda2PM, rememberingErlinda6PM } from "$lib/config";
 
 export const load: PageServerLoad = async (event) => {
 	const { registrant } = await event.parent();
@@ -43,6 +43,17 @@ export const actions = {
 			return fail(400, {
 				form
 			});
+		}
+
+		const registrationCount = await db
+			.select({
+				total: sql<number>`cast(count(${rememberingErlinda2PMTable.id}) as int)`
+			})
+			.from(rememberingErlinda2PMTable)
+			.where(eq(rememberingErlinda2PMTable.email_verified, true));
+
+		if (registrationCount[0].total >= rememberingErlinda6PM.limit) {
+			return setError(form, "", "Sorry, Registrants limit reached");
 		}
 
 		const { code } = form.data;
