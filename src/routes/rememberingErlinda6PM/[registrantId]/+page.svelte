@@ -59,6 +59,30 @@
 					</div>
 				</div>
 			</div>
+			<div class="mx-auto max-w-2xl space-y-2 rounded-md bg-neutral-300/90 px-4 py-4 sm:px-6">
+				<h3 class="text-xl font-bold">Event Reminders</h3>
+				<p class="text-xs">
+					Maraming salamat sa inyong pagregister upang mapanuod ang Remembering Erlinda bilang
+					bahagi ng paggunita sa 82nd Araw ng Kagitingan.
+				</p>
+				<p class="text-xs">Magkita-kita po tayo sa Abril 5, 6:00 PM.</p>
+				<p class="text-xs">Mayroon lamang pong ilang mga paalala sa panunuod:</p>
+				<p class="text-xs">
+					1. Mahigpit pong ipinakikiusap na i-turn off o ilagay sa silent mode ang ating mga
+					cellphones habang may nagtatanghal.
+				</p>
+				<p class="text-xs">
+					2. Maaring tumawa o pumalakpak sa mga bahaging nakakatuwa ngunit hindi pinapahintulutan
+					ang paglikha ng ano mang ingay o galaw na maaring makasagabal sa mga nagtatanghal.
+				</p>
+				<p class="text-xs">
+					3. Mahigpit din pong ipinagbabawal ang pagkuha ng anumang video o larawan ng walang
+					pahintulot mula sa produksyon o sa Provincial Tourism Office.
+				</p>
+				<p class="text-xs">
+					4.Hindi rin po pinahihintulan ang pagkain at pag-inom sa loob ng tanghalan.
+				</p>
+			</div>
 		</div>
 	</main>
 </div>
