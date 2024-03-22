@@ -2,7 +2,16 @@ export const rememberingErlinda2PM = {
 	limit: 1000,
 	address: "PENELCO HIGHWAY",
 	date: "April 5, 2024 - 2:00PM",
-	schools: ["SCHOOL 1", "SCHOOl 2", "SCHOOL 3"],
+	schools: [
+		"PABLO ROMAN NATIONAL HIGH SCHOOL",
+		"LIMAY NATIONAL HIGH SCHOOL",
+		"MARIVELES NATIONAL HIGH SCHOOL – CABCABEN",
+		"HERMOSA NATIONAL HIGH SCHOOL",
+		"ORANI NATIONAL HIGH SCHOOL",
+		"PAGALANGGANG NATIONAL HIGH SCHOOL",
+		"BATAAN HIGH SCHOOL FOR THE ARTS",
+		"Department of Education -  Bataan"
+	],
 	generateQrHTML: (subject: string, registrantId: string) => {
 		return `
 			<h1>You are now registered to ${subject}</h1>
