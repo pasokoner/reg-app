@@ -11,6 +11,17 @@ export const rememberingErlinda2PMTable = pgTable("remembering_erlinda_2_pm", {
 	used: boolean("used").default(false)
 });
 
+export const rememberingErlinda6PMTable = pgTable("remembering_erlinda_6_pm", {
+	id: uuid("id").defaultRandom().primaryKey(),
+	fullName: text("full_name").notNull(),
+	dob: date("dob").notNull(),
+	address: text("school").notNull(),
+	contactNumber: text("contact_number").notNull().unique(),
+	email: text("email").notNull().unique(),
+	email_verified: boolean("email_verified").default(false).notNull(),
+	used: boolean("used").default(false)
+});
+
 export const emailVerficationTable = pgTable("email_verification", {
 	id: uuid("id").defaultRandom().primaryKey(),
 	code: text("code").notNull(),
