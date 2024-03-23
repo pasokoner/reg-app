@@ -96,7 +96,7 @@ export const actions = {
 		await sendEmail(
 			verifiedRegistrant.email,
 			"Email has been verified",
-			rememberingErlinda6PM.generateQrHTML("Email has been verified", verifiedRegistrant.id)
+			rememberingErlinda6PM.generateQrHTML("Remembering Erlinda 6PM", verifiedRegistrant.id)
 		);
 
 		redirect(302, "/rememberingErlinda6PM/" + event.params.registrantId);
