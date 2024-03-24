@@ -27,21 +27,26 @@
 <div class="bg-centerbg-center bg-[url('/remembering-erlinda.webp')] bg-contain bg-fixed">
 	<main class="container flex min-h-screen w-full flex-col justify-center py-16">
 		<div class="w-full">
-			<div class="mx-auto max-w-2xl space-y-1 rounded-t-md bg-neutral-300 px-4 py-4 sm:px-6">
-				<h1 class="text-2xl">Remembering Erlinda</h1>
-				<p class="text-xs text-neutral-600 sm:text-sm">
-					A Musical Production by BATAAN TOURISM COUNCIL FOUNDATION INC. In partnership with
-					Tanghalang Tatsulok, BNHS, & On Stage Events
+			<div
+				class="mx-auto max-w-2xl space-y-1 rounded-t-md bg-neutral-300 px-4 py-4 text-justify sm:px-6"
+			>
+				<h1 class="text-2xl">
+					Ikaw-82 taong paggunita sa Araw ng Kagitingan Cultural Night: Remebering Erlinda
+				</h1>
+				<p class="text-neutral-600">
+					Inihahandog ng Provincial Tourism Office at Bataan Peninsula Tourism Council Foundation,
+					Inc. sa direksyon ni G. Carlos "Bong" Ramos at panulat ni G. Dingdong Novenario kasama ang
+					Tanghalang Tatsulok at BNHS Artist sa pakikipagtulungan ng On Stage Events.
 				</p>
-				<p class="text-xs text-neutral-600 sm:text-sm">
+				<p class="text-neutral-600">
 					<span class="font-bold">Where:</span>
 					{rememberingErlinda6PM.address}
 				</p>
-				<p class="text-xs text-neutral-600 sm:text-sm">
+				<p class="text-neutral-600">
 					<span class="font-bold">When:</span>
 					{rememberingErlinda6PM.date}
 				</p>
-				<p class="text-xs text-neutral-600 sm:text-sm">
+				<p class="text-neutral-600">
 					<span class="font-bold">Registration Limit:</span>
 					<span class="rounded-lg bg-white px-2 py-1">
 						{registrantCount} / {rememberingErlinda6PM.limit}
@@ -52,7 +57,7 @@
 						<span class="rounded-lg bg-green-500 px-2 py-1 text-white">OPEN</span>
 					{/if}
 				</p>
-				<p class="text-xs text-neutral-600 sm:text-sm">
+				<p class="text-neutral-600">
 					This website refreshes every 30 seconds. Refresh for the latest count.
 				</p>
 			</div>
