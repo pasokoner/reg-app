@@ -1,17 +1,7 @@
 export const rememberingErlinda2PM = {
 	limit: 1000,
-	address: "PENELCO HIGHWAY",
-	date: "April 5, 2024 - 2:00PM",
-	schools: [
-		"PABLO ROMAN NATIONAL HIGH SCHOOL",
-		"LIMAY NATIONAL HIGH SCHOOL",
-		"MARIVELES NATIONAL HIGH SCHOOL – CABCABEN",
-		"HERMOSA NATIONAL HIGH SCHOOL",
-		"ORANI NATIONAL HIGH SCHOOL",
-		"PAGALANGGANG NATIONAL HIGH SCHOOL",
-		"BATAAN HIGH SCHOOL FOR THE ARTS",
-		"Department of Education -  Bataan"
-	],
+	address: "Edgardo R. Piamonte Auditorium (ERPA), PENELCO, Lungsod ng Balanga",
+	date: "Abril 5, 2024 - 2:00PM",
 	generateQrHTML: (subject: string, registrantId: string) => {
 		return `
 			<h1>You are now registered to ${subject}</h1>
@@ -29,8 +19,8 @@ export const rememberingErlinda2PM = {
 
 export const rememberingErlinda6PM = {
 	limit: 1000,
-	address: "PENELCO HIGHWAY",
-	date: "April 5, 2024 - 6:00PM",
+	address: "Edgardo R. Piamonte Auditorium (ERPA), PENELCO, Lungsod ng Balanga",
+	date: "Abril 5, 2024 - 6:00PM",
 	generateQrHTML: (subject: string, registrantId: string) => {
 		return `
 			<h1>You are now registered to ${subject}</h1>
