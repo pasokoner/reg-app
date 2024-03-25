@@ -18,7 +18,7 @@ export const rememberingErlinda2PM = {
 };
 
 export const rememberingErlinda6PM = {
-	limit: 1000,
+	limit: 600,
 	address: "Edgardo R. Piamonte Auditorium (ERPA), PENELCO, Lungsod ng Balanga",
 	date: "Abril 5, 2024 - 6:00PM",
 	generateQrHTML: (subject: string, registrantId: string) => {
