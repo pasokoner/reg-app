@@ -26,7 +26,7 @@
 				class="mx-auto max-w-2xl space-y-1 rounded-md bg-neutral-300/90 px-4 py-4 text-justify sm:px-6"
 			>
 				<h1 class="text-2xl">
-					Ikaw-82 taong paggunita sa Araw ng Kagitingan Cultural Night: Remebering Erlinda
+					Ikaw-82 taong paggunita sa Araw ng Kagitingan Cultural Night: Remembering Erlinda
 				</h1>
 				<p class="text-neutral-600">
 					Inihahandog ng Provincial Tourism Office at Bataan Peninsula Tourism Council Foundation,
